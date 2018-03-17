@@ -2,7 +2,7 @@
  * @Author: shizhidi
  * @Date: 2018-02-01 23:01:15
  * @Last Modified by: shizhidi
- * @Last Modified time: 2018-02-11 17:48:16
+ * @Last Modified time: 2018-02-15 17:35:08
  */
 
 
@@ -91,7 +91,7 @@ router.post('/logout',function (req, res, next) {
   }
 })
 
-router.get('/checkLogin',function (req, res, next) {
+router.post('/checkLogin',function (req, res, next) {
   const userId = req.cookies.userId
   if (userId) {
     Users.findOne({userId:userId},function (err, user) {

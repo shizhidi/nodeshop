@@ -69,7 +69,7 @@ new Vue({
   },
   methods:{
     checkLogin(){
-      axios.get("users/checkLogin").then(res=> {
+      axios.post("users/checkLogin").then(res=> {
         var res = res.data;
         if (res.status == "0") {
           this.$store.commit("updateUserInfo", res.userName);
