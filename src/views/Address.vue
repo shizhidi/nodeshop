@@ -13,16 +13,16 @@
             <!-- process step -->
             <div class="check-step">
               <ul>
-                <li class="cur"><span>Confirm</span> address</li>
-                <li><span>View your</span> order</li>
-                <li><span>Make</span> payment</li>
-                <li><span>Order</span> confirmation</li>
+                <li class="cur">确认地址</li>
+                <li>查看订单</li>
+                <li>支付</li>
+                <li>确认订单</li>
               </ul>
             </div>
 
             <!-- address list -->
             <div class="page-title-normal checkout-title">
-              <h2><span>Shipping address</span></h2>
+              <h2><span>邮寄地址</span></h2>
             </div>
             <div class="addr-list-wrap">
               <div class="addr-list">
@@ -39,7 +39,7 @@
                       </a>
                     </div>
                     <div class="addr-opration" :class="{'addr-set-default':true}">
-                      <a href="javascript:;" class="addr-set-default-btn" @click="setDefaultAddress(address,index)"><i>Set default</i></a>
+                      <a href="javascript:;" class="addr-set-default-btn" @click="setDefaultAddress(address,index)"><i>设置默认地址</i></a>
                     </div>
                     <div class="addr-opration addr-default">{{ defaultAddress(address,index) }}</div>
                   </li>
@@ -48,7 +48,7 @@
                       <i class="icon-add">
                         <svg class="icon icon-add"><use xlink:href="#svg_icon-add"></use></svg>
                       </i>
-                      <p>Add new address</p>
+                      <p>添加新地址</p>
                     </div>
                   </li>
                 </ul>
@@ -56,7 +56,7 @@
 
               <div class="shipping-addr-more">
                 <a class="addr-more-btn up-down-btn" href="javascript:;" :class="{'open': open}" @click="showMoreList">
-                  more
+                  更多
                   <i class="i-up-down">
                     <i class="i-up-down-l"></i>
                     <i class="i-up-down-r"></i>
@@ -67,23 +67,23 @@
 
             <!-- shipping method-->
             <div class="page-title-normal checkout-title">
-              <h2><span>Shipping method</span></h2>
+              <h2><span>邮寄方式</span></h2>
             </div>
             <div class="shipping-method-wrap">
               <div class="shipping-method">
                 <ul>
                   <li class="check">
-                    <div class="name">Standard shipping</div>
-                    <div class="price">Free</div>
+                    <div class="name">标准方式</div>
+                    <div class="price">免费</div>
                     <div class="shipping-tips">
-                      <p>Once shipped，Order should arrive in the destination in 1-7 business days</p>
+                      <p>一旦装运，订单将在1-7天内到达目的地。</p>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="next-btn-wrap">
-              <router-link class="btn btn--m btn--red" href="#" :to="{ path: '/orderConfirm', query: { addressId: clickCurrentAddressId}}">Next</router-link>
+              <router-link class="btn btn--m btn--red" href="#" :to="{ path: '/orderConfirm', query: { addressId: clickCurrentAddressId}}">下一步</router-link>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ export default {
       if (address.isDefault) {
         this.defaultIndex = index
         this.defaulAddressId = address.addressId
-        str = 'Default address';
+        str = '默认地址';
       }
       return  str
     },

@@ -19,7 +19,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: -20px;
+  margin-left: -10px;
 }
 .navbar-brand-logo {
   /*width: 120px;*/
@@ -121,6 +121,17 @@ a {
 .login-wrap{
   margin-top:30px;
 }
+
+@media only screen and (max-width: 767px) {
+  .md-title{
+    top: 0;
+    padding: 8px 10px;
+  }
+  .login-wrap{
+    margin-top:0;
+  }
+}
+
 .md-content .btn-login{
   display: block;
   height: 38px;

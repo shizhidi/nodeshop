@@ -10,8 +10,8 @@
         <div class="navbar-menu-container">
           <!--<a href="/" class="navbar-link">我的账户</a>-->
           <span class="navbar-link">{{ nickName ? nickName : '' }}</span>
-          <a href="javascript:void(0)" v-if="nickName" class="navbar-link" @click="userLogout">Logout</a>
-          <a href="javascript:void(0)" v-if="!nickName" class="navbar-link" @click="userLogin">Login</a>
+          <a href="javascript:void(0)" v-if="nickName" class="navbar-link" @click="userLogout">登出</a>
+          <a href="javascript:void(0)" v-if="!nickName" class="navbar-link" @click="userLogin">登录</a>
 
           <div class="navbar-cart-container">
             <span class="navbar-cart-count">{{ cartCount ? cartCount : '' }}</span>

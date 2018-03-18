@@ -1637,7 +1637,7 @@ html {
   }
 
   .cart-foot-wrap .item-total .total-price {
-    display: block;
+    display: inline-block;
     margin: 0;
     font-size: 1.6rem;
     margin-top: 2px;

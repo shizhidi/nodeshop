@@ -9,25 +9,25 @@
         <!-- process step -->
         <div class="check-step">
           <ul>
-            <li class="cur"><span>Confirm</span> address</li>
-            <li class="cur"><span>View your</span> order</li>
-            <li><span>Make</span> payment</li>
-            <li><span>Order</span> confirmation</li>
+            <li class="cur">确认地址</li>
+            <li class="cur">查看订单</li>
+            <li>支付</li>
+            <li>确认订单</li>
           </ul>
         </div>
 
         <!-- order list -->
         <div class="page-title-normal checkout-title">
-          <h2><span>Order content</span></h2>
+          <h2><span>订单内容</span></h2>
         </div>
         <div class="item-list-wrap confirm-item-list-wrap">
           <div class="cart-item order-item">
             <div class="cart-item-head">
               <ul>
-                <li>Order contents</li>
-                <li>Price</li>
-                <li>Quantity</li>
-                <li>Subtotal</li>
+                <li>订单内容</li>
+                <li>单价</li>
+                <li>数量</li>
+                <li>合计</li>
               </ul>
             </div>
             <ul class="cart-item-list">
@@ -51,7 +51,7 @@
                         <span class="select-ipt">×{{ cart.productNum }}</span>
                       </div>
                     </div>
-                    <div class="item-stock item-stock-no">In Stock</div>
+                    <div class="item-stock item-stock-no">有现货</div>
                   </div>
                 </div>
                 <div class="cart-tab-4">
@@ -67,23 +67,23 @@
           <div class="price-count">
             <ul>
               <li>
-                <span>Item subtotal:</span>
+                <span>商品总价:</span>
                 <span>{{ subtotal }}</span>
               </li>
               <li>
-                <span>Shipping:</span>
+                <span>运费:</span>
                 <span>30</span>
               </li>
               <li>
-                <span>Discount:</span>
+                <span>折扣:</span>
                 <span>100</span>
               </li>
               <li>
-                <span>Tax:</span>
+                <span>个税:</span>
                 <span>300</span>
               </li>
               <li class="order-total-price">
-                <span>Order total:</span>
+                <span>订单总额:</span>
                 <span>{{ orderTotal }}</span>
               </li>
             </ul>
@@ -92,10 +92,10 @@
 
         <div class="order-foot-wrap">
           <div class="prev-btn-wrap">
-            <router-link class="btn btn--m" to="/address">Previous</router-link>
+            <router-link class="btn btn--m" to="/address">上一步</router-link>
           </div>
           <div class="next-btn-wrap">
-            <button class="btn btn--m btn--red" @click="createOrder">Proceed to payment</button>
+            <button class="btn btn--m btn--red" @click="createOrder">前往支付</button>
           </div>
         </div>
       </div>

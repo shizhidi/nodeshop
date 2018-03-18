@@ -42,6 +42,10 @@ export default {
 };
 </script>
 <style>
+  .modal-wrap {
+    min-height: 50px;
+    _height:50px;
+  }
   .modal-wrap div {
     display: -webkit-flex; /* Safari */
     display: flex;

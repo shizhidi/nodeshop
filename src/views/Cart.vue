@@ -7,17 +7,17 @@
     <div class="container">
       <div class="cart">
         <div class="page-title-normal">
-          <h2 class="page-title-h2"><span>My Cart</span></h2>
+          <h2 class="page-title-h2"><span>我的购物车</span></h2>
         </div>
         <div class="item-list-wrap">
           <div class="cart-item">
             <div class="cart-item-head">
               <ul>
-                <li>Items</li>
-                <li>Price</li>
-                <li>Quantity</li>
-                <li>Subtotal</li>
-                <li>Edit</li>
+                <li>商品</li>
+                <li>单价</li>
+                <li>数量</li>
+                <li>合计</li>
+                <li>编辑</li>
               </ul>
             </div>
             <ul class="cart-item-list">
@@ -75,13 +75,13 @@
                   <span class="checkbox-btn item-check-btn" :class="{'check': hasSelectAll}">
                       <svg class="icon icon-ok"><use xlink:href="#icon-ok"/></svg>
                   </span>
-                  <span>Select all</span>
+                  <span>全选</span>
                 </a>
               </div>
             </div>
             <div class="cart-foot-r">
               <div class="item-total">
-                Item total: <span class="total-price">{{ cartsTotal }}</span>
+                商品总价: <span class="total-price">{{ cartsTotal }}</span>
               </div>
               <div class="btn-wrap">
                 <a class="btn btn--red" :class="{'btn--dis': !cartsChecked}" @click="JumpAddress">Checkout</a>

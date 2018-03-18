@@ -30,10 +30,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './dist')));
 
-// app.get('*', function(req, res) {
-//   const html = fs.readFileSync(path.resolve(__dirname, './dist/index.html'), 'utf-8')
-//   res.send(html)
-// })
+app.get('*', function(req, res) {
+  const html = fs.readFileSync(path.resolve(__dirname, './dist/index.html'), 'utf-8')
+  res.send(html)
+})
 
 app.use(function (req,res,next) {
   if(req.cookies.userId){
