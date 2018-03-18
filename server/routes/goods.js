@@ -2,7 +2,7 @@
  * @Author: shizhidi
  * @Date: 2018-02-01 23:01:21
  * @Last Modified by: shizhidi
- * @Last Modified time: 2018-02-11 16:08:37
+ * @Last Modified time: 2018-03-18 21:04:24
  */
 
 const express = require('express');
@@ -13,16 +13,17 @@ const Users = require('../models/usersModel');
 
 router.get('/',function (req, res, next) {
   //这个路由默认路径: /goods
+  console.log('商品');
 })
 
-router.get('/goodsList', function (req, res, next) {
-  console.log(req.query.page);
-  let page = +req.query.page;
-  let pageSize = +req.query.pageSize;
+router.post('/goodsList', function (req, res, next) {
+  console.log(req.body.page);
+  let page = +req.body.page;
+  let pageSize = +req.body.pageSize;
   let skip = (page - 1) * pageSize;
-  let goods = Goods.find({salePrice:{ "$gt" : +req.query.filterMin, "$lt" : +req.query.filterMax }}).skip(skip).limit(pageSize);
+  let goods = Goods.find({salePrice:{ "$gt" : +req.body.filterMin, "$lt" : +req.body.filterMax }}).skip(skip).limit(pageSize);
 
-  goods.sort({'salePrice': req.query.sort}).exec(function(err,docs){
+  goods.sort({'salePrice': req.body.sort}).exec(function(err,docs){
     if (err) {
       res.json({
         status: false,

@@ -178,9 +178,7 @@ export default {
         filterMax: this.filterMax
       };
       this.$axios
-        .get("/goods/goodsList", {
-          params: params
-        })
+        .post("/goods/goodsList", params)
         .then(res => {
           let data = res.data;
           console.log(res.data);
